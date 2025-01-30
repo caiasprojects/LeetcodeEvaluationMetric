@@ -9,7 +9,10 @@ Ensure you have the following installed:
 - Python 3.10+
 - Required dependencies:
   ```bash
-  pip install datasets transformers vllm numpy pandas matplotlib
+  pip install datasets transformers vllm numpy pandas matplotlib torch==2.3.1 \
+  transformers==4.45.0 vllm==0.5.3.post1 datasets==2.21.0 wandb==0.17.6 \
+  numpy==1.26.4 pandas==2.2.2 matplotlib==3.9.2 scipy==1.13.1 \
+  argparse==1.4.0 tqdm==4.66.5 jinja2==3.1.4
   ```
 - A compatible LLM, such as `google/gemma-2-2b-it`.
 
@@ -76,4 +79,4 @@ python3 timeleet.py --dirs res/eval100 --samples 100
 The final results will be stored in `res/eval100_results.csv`.
 
 ## Conclusion
-This pipeline automates the evaluation of LLMs on coding problems. You can modify model parameters, temperatures, or prompts to optimize performance.
+This pipeline automates the evaluation of LLMs on coding problems. You can modify model parameters or prompts to optimize performance.
